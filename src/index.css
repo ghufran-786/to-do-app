@@ -1,0 +1,174 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Body Styling ===== */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+/* ===== Main App Container ===== */
+.app {
+  background: #ffffff;
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.app:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgb(145, 141, 141);
+}
+
+/* ===== Heading ===== */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* ===== Input Section ===== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #764ba2;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-section input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(118, 75, 162, 0.3);
+}
+
+.input-section button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.input-section button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* ===== Todo List ===== */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== Todo Item Card ===== */
+.todo-item {
+  background: #f5f5ff;
+  border-left: 6px solid #667eea;;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.todo-item:hover {
+  background: #eceaff;
+  transform: translateY(-2px);
+}
+
+/* ===== Text Styling ===== */
+.todo-item span {
+  flex: 1;
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* ===== Buttons ===== */
+.todo-item button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+
+.todo-item button:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* Edit Button */
+.todo-item button:first-child {
+  background-color: #4caf50; /* Green for edit */
+}
+
+/* Delete Button */
+.todo-item button:last-child {
+  background-color: #ff4d4f; /* Red for delete */
+}
+
+/* Save Button */
+.todo-item button:contains("Save"),
+.todo-item button:has(💾) {
+  background-color: #28a745;
+}
+
+/* ===== Edit Input ===== */
+.todo-item input {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 15px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.todo-item input:focus {
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 450px) {
+  .app {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
