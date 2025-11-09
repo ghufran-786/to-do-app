@@ -162,7 +162,7 @@ h1 {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 450px) {
+@media (max-width: 350px) {
   .app {
     width: 90%;
     padding: 20px;
